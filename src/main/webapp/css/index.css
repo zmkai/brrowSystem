@@ -1,0 +1,27 @@
+table,th, td{
+		 		border: solid 1px rgba(185, 185, 185, 1);
+		 		text-align: center;
+		 		font-size: 95%;
+		}
+			table{
+				align-content: center;
+				width: 1020px;
+				margin: 40px auto;
+		}
+		#welcomeTo{
+			margin-top: 40px;
+			margin-right: 120px;
+			float: right;
+		}
+		.course{
+			height: 48px;
+		}
+		.footer{
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		.footerWriting{
+			text-align: center;
+			line-height: 6px;
+			font-size: small;
+		}

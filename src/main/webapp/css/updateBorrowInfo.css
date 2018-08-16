@@ -1,0 +1,33 @@
+.footer{
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		.footerWriting{
+			text-align: center;
+			line-height: 6px;
+			font-size: small;
+		}
+		.biTian{
+			margin-left: 80px;
+			margin-right: 25px;
+		}
+		.mainMessage{
+			font-size: larger;
+			font-family: "微软雅黑";
+			margin-bottom: 40px;
+		}
+		select{
+			width: 150px;
+			height: 30px;
+		}
+		input{
+			width: 180px;
+			height: 30px;
+			font-size:large;
+		}
+		button{
+			width: 200px;
+			height: 50px;
+			margin: 20px 50px;
+			background-color: rgba(110, 178, 143, 1);
+		}

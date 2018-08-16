@@ -1,0 +1,30 @@
+.footer{
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		.footerWriting{
+			text-align: center;
+			line-height: 6px;
+			font-size: small;
+		}
+		ul{
+			width: 1020px;
+			background-color: #FFFFFF;
+			
+			margin: 0px auto;
+			margin-bottom: 40px !important;
+			padding: 0px;
+		}
+		ul li{
+			list-style: none;
+			height: 60px;
+			font-size: larger;
+			text-align: center;
+			line-height: 55px;
+			border-bottom: 1px solid #c9c9c9;
+		}
+		.pagination{
+			width: 300px;
+			height: 50px;
+			;margin: 0 auto;
+		}

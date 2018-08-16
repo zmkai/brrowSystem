@@ -1,0 +1,36 @@
+.footer{
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		.footerWriting{
+			text-align: center;
+			line-height: 6px;
+			font-size: small;
+		}
+		ul{
+			width: 1020px;
+			background-color: #FFFFFF;
+			border: 1px solid #ababab;
+			margin: 40px auto;
+			padding: 0px;
+		}
+		ul li{
+			list-style: none;
+			height: 55px;
+			font-size: larger;
+			text-align: center;
+			line-height: 55px;
+			border-bottom: 1px solid #c9c9c9;
+		}
+		.firstLine{
+			float: left;
+			margin: auto 5px;
+		}
+		.firstSpan{
+			float: left;
+			margin-left: 100px;
+		}
+		.lastSpan{
+			float: left;
+			margin-left: 200px;
+		} 

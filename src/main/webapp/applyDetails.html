@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>录播教室使用安排系统</title>
+		<link rel="stylesheet" type="text/css" href="css/applyDetails.css"/>
+	</head>
+	<body>
+		<div class="content">
+			<header style="width: 100%; height: 75px; margin-bottom: 20px;">
+				<img src="img/logo.png"/ style="width: 297px; height: 75px; margin: 3px 115px;">
+			</header>
+			<div class="main" style="background-color: #f7f7f7; padding: 1px 0; width: 100%;">
+				<ul id="ul">
+					<li style="margin-left: 10px;">
+						<a href="applyList.html">
+						<span class="firstLine">已用信息</span>
+						</a>
+						<span class="firstLine">
+							<svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="514"><path d="M312.888889 995.555556c-17.066667 0-28.444444-5.688889-39.822222-17.066667-22.755556-22.755556-17.066667-56.888889 5.688889-79.644445l364.088888-329.955555c11.377778-11.377778 17.066667-22.755556 17.066667-34.133333 0-11.377778-5.688889-22.755556-17.066667-34.133334L273.066667 187.733333c-22.755556-22.755556-28.444444-56.888889-5.688889-79.644444 22.755556-22.755556 56.888889-28.444444 79.644444-5.688889l364.088889 312.888889c34.133333 28.444444 56.888889 73.955556 56.888889 119.466667s-17.066667 85.333333-51.2 119.466666l-364.088889 329.955556c-11.377778 5.688889-28.444444 11.377778-39.822222 11.377778z" p-id="515"></path></svg>
+						</span>
+						<span class="firstLine" style="background-color: rgba(110, 178, 143, 1); height: 30px; width: 70px; margin-top: 14px; line-height: 26px;">
+							<font color="#FFFFFF">详情</font>
+						</span>
+					</li>
+					<li></li>
+					<li style="background-color: rgba(230, 230, 230, 1);">
+						<span class="firstSpan">教室名称：</span>
+						<span class="lastSpan">北区315</span>
+					</li>
+					<li>
+						<span class="firstSpan">使用时间：</span>
+						<span class="lastSpan">2017年11月1日</span>
+					</li>
+					<li style="background-color: rgba(230, 230, 230, 1);">
+						<span class="firstSpan">使用人：</span>
+						<span class="lastSpan" style="margin-left: 220px;">大佬</span>
+					</li>
+					<li>
+						<span class="firstSpan">使用节次：</span>
+						<span class="lastSpan">2017年11月1日</span>
+					</li>
+					<li style="background-color: rgba(230, 230, 230, 1);">
+						<span class="firstSpan">使用类型：</span>
+						<span class="lastSpan">会议</span>
+					</li>
+					<li>
+						<span class="firstSpan">备注：</span>
+						<span class="lastSpan">&emsp;&emsp;教务处借用</span>
+					</li>
+				</ul>
+				<div style="width: 500px; height: 100px; margin-left: 250px;">
+					<button onclick="passApplyRecord();" style="width: 140px; height: 50px; background-color: rgba(110, 178, 143, 1);">
+						<font color="#dff4e6">通过并发布 </font>
+					</button>
+					<button onclick="deleteApplyRecord();"  style="width: 140px; height: 50px; background: rgb(115,115,115); margin-left: 50px;">
+						<font color="#dff4e6">不通过</font>
+					</button>
+				</div>
+			</div>
+			<div class="footer">
+				<p class="footerWriting"><font color="#399b69">Copyright © 2010-2017 沈阳农业大学 版权所有</font></p>
+				<p class="footerWriting"><font color="#399b69">系统研发与技术支持：神农软件</font></p>
+				<p class="footerWriting"><font color="#399b69">开发者：神农软件</font></p>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery.1.11.0.min.js"></script>
+	<script src="js/applyDetails.js"></script>
+</html>

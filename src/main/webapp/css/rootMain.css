@@ -1,0 +1,43 @@
+.footer{
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		.footerWriting{
+			text-align: center;
+			line-height: 6px;
+			font-size: small;
+		}
+		ul{
+			width: 1020px;
+			background-color: #FFFFFF;
+			border: 1px solid #ababab;
+			margin: 40px auto;
+			padding: 0px;
+		}
+		ul li{
+			list-style: none;
+			height: 60px;
+			font-size: larger;
+			text-align: center;
+			line-height: 55px;
+			border-bottom: 1px solid #c9c9c9;
+		}
+		.pagination{
+			width: 300px;
+			height: 50px;
+			;margin: 0 auto;
+		}
+		#lastPage{
+			width: 80px;
+			height: 30px;
+		}
+		#selectPage{
+			width: 80px;
+			height: 30px;
+			text-align: center;
+			font-size: large;
+		}
+		#nextPage{
+			width: 80px;
+			height: 30px;
+		}

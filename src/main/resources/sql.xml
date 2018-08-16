@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<namespace>
+<!-- 插入一条记录 -->
+  <select id = "insertRecord">
+	INSERT INTO brrowrecord_table (
+		record_id,
+		class_id,
+		user_time,
+		username,
+		period,
+		describe_info,
+		usetype,
+		delete_mark,
+		operatetime
+	)
+	VALUES
+		(?, ?, ?, ?, ?, ?, ?, ?, ?)
+  </select>
+  
+  <!-- 删除记录，其实质为改变标志位为1 -->
+  <select id="deleteBrrowRecord">
+	UPDATE brrowrecord_table
+	SET delete_mark = '1'
+	WHERE
+		record_id = ?
+  </select>
+  
+  <!-- 更新一条记录 -->
+  <select id="updateBrrowRecord">
+	UPDATE brrowrecord_table
+		SET class_id = ?,
+		user_time = ?,
+		username = ?,
+		period = ?,
+		describe_info = ?,
+		usetype = ?,
+		operatetime = ?
+		WHERE
+			record_id = ?
+  </select>
+  
+  <!-- 检查冲突 -->
+   <select id="checkconflict">
+		SELECT
+			*
+		FROM
+			brrowrecord_table
+		WHERE
+			class_id = ?
+		AND period = ?
+		AND user_time = ?
+		AND delete_mark = '0'
+  </select>
+  <!-- 查询一条详细记录 -->
+   <select id="queryBrrowInfoDail">
+		SELECT
+		c.class_name,
+		b.record_id,
+		b.user_time,
+		b.period,
+		b.username,
+		b.usetype,
+		b.describe_info
+	FROM
+		brrowrecord_table b
+	LEFT JOIN classes_table c ON b.class_id = c.class_id
+	WHERE
+		b.record_id = ?
+	AND b.delete_mark = '0'
+  </select>
+  
+   <!-- 查询记录列表 -->
+   <select id = "getBorrowRecordAll">
+		SELECT
+			c.class_name,
+			b.record_id,
+			b.user_time,
+			b.period
+		FROM
+			brrowrecord_table b
+		LEFT JOIN classes_table c ON b.class_id = c.class_id
+		WHERE
+			b.delete_mark = '0'
+		ORDER BY
+			b.user_time DESC
+   </select>
+   
+  <!--查询教室列表-->
+  <select id="getClassList">
+      SELECT
+			*
+		FROM
+			classes_table   
+  </select>
+  
+  <!-- 查询两周内的记录 -->
+  <select id = "queryDuring2Week">
+		SELECT
+			b.class_id,
+			b.record_id,
+			c.class_name,
+			b.user_time,
+			b.username,
+			b.period,
+			b.usetype,
+			b.describe_info
+		FROM
+			brrowrecord_table b
+		LEFT JOIN classes_table c ON b.class_id = c.class_id
+		WHERE
+			b.delete_mark = '0'
+		AND b.user_time BETWEEN ?
+		AND ?
+  </select>
+  
+  <!-- 获得记录数 -->
+  <select id = "getRecordCount">
+      SELECT
+			COUNT(record_id) recordCount
+		FROM
+			brrowrecord_table
+		WHERE
+			delete_mark = '0'
+  </select>  
+  
+  <!-- 以时间排序查询十条数据 -->
+  <select id="getTenRecords">
+      SELECT
+		b.record_id,
+		c.class_name,
+		b.user_time,
+		b.period
+	FROM
+		brrowrecord_table b
+	LEFT JOIN classes_table c ON b.class_id = c.class_id
+	ORDER BY
+		b.user_time DESC
+	LIMIT ?,
+	 10
+  </select>
+  
+  <!-- 增加一条申请记录 -->
+  <select id="AddApply">
+      INSERT INTO applytable (
+      	account,
+		class_id,
+		user_time,
+		username,
+		period,
+		type,
+		email,
+		my_describe,
+		operatetime
+	)
+	VALUES
+		(?,?, ?, ?, ?, ?, ?, ?, ?)
+  </select>
+  
+  <!-- 查询某位游客的申请记录 -->
+  <select id ="getOneApplys">
+	SELECT
+		C.class_name,
+		T.user_time,
+		T.username,
+		T.period,
+		T.type
+	FROM
+		applytable T
+	LEFT JOIN classes_table C ON T.class_id = C.class_id
+	WHERE
+		T.account = ?
+  </select>
+  
+  <!-- 查询所有游客的申请记录 -->
+  <select id="getAllApplys">
+      SELECT
+		T.id,
+	    C.class_name,
+		T.user_time,
+		T.period
+	FROM
+		applytable T
+	LEFT JOIN classes_table C ON T.class_id = C.class_id
+  </select>
+  
+  <!-- 查询申请记录详情-->
+  <select id="getApplyDetail">
+      SELECT
+        T.class_id,
+		C.class_name,
+		T.username,
+		T.user_time,
+		T.period,
+		T.type,
+		T.email,
+		T.my_describe
+	FROM
+		applytable T
+	LEFT JOIN classes_table C ON T.class_id = C.class_id
+	WHERE
+		T.id = ?
+  </select>
+  
+  <!-- 审核不通过 -->
+  <select id="deleteApplyById">
+      DELETE 
+		FROM
+			applytable
+		WHERE
+			id = ?
+  </select>
+  
+  <!-- 获得申请记录总数-->
+  <select id="getApplyCount">
+      SELECT
+			COUNT(id) applycount
+		FROM
+			applytable
+  </select>
+</namespace>

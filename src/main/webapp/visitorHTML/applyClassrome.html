@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>录播教室使用安排系统</title>
+		<link rel="stylesheet" type="text/css" href="../css/addBorrowInfo.css"/>
+		
+		<!--初始化时间选择器-->
+		<link href="../css/lyz.calendar.css" rel="stylesheet" type="text/css" />
+		<script src="http://www.jq22.com/jquery/1.4.4/jquery.min.js"></script>
+		<script src="../js/lyz.calendar.min.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				$("#txtEndDate").calendar();
+			});
+		</script>
+	</head>
+		<div class="content">
+			<header style="width: 100%; height: 75px; margin-bottom: 20px;">
+				<img src="../img/logo.png"/ style="width: 297px; height: 75px; margin: 3px 115px;">
+			</header>
+			<div style="background-color: #f7f7f7; padding: 1px 0; width: 100%;">
+				<div class="main" style="background-color: #FFFFFF;width: 1020px; height: 710px; margin: 20px auto;">
+					<div class="mainMessage" style="padding-top: 70px;">
+						<span class="biTian"><font color="limegreen">(必填)</font></span>
+						<span class="message">使用教室：</span>
+						<span>
+							<select name="" id="classList">
+								<option value="" style="display: none;" disabled selected>选择教室</option>
+								<option value="1">北区315</option>
+							</select>
+						</span>
+					</div>
+					<div class="mainMessage">
+						<span class="biTian"><font color="limegreen">(必填)</font></span>
+						<span class="message">使用时间：</span>
+						<input id="txtEndDate" style="width:170px;padding:2px 10px;border:1px solid #ccc;" />
+					</div>
+					<div class="mainMessage">
+						<span class="biTian" style="margin-right: 47px !important;"><font color="limegreen">(必填)</font></span>
+						<span style="margin-right: 42px !important;" class="message">使用人：</span>
+						<input type="" name="" id="user" value="" style="" placeholder="使用人姓名或使用单位名" />
+					</div>
+					<div class="mainMessage">
+						<span class="biTian"><font color="limegreen">(必填)</font></span>
+						<span class="message">使用节次：</span>
+						<span>
+							<select name="" id="peroid">
+								<option value="" style="display: none;" disabled selected>选择节次</option>
+								<option value="1">第一大节</option>
+								<option value="2">第二大节</option>
+								<option value="3">第三大节</option>
+								<option value="4">第四大节</option>
+								<option value="5">第五大节</option>
+							</select>
+						</span>
+					</div>
+					<div class="mainMessage">
+						<span class="biTian"><font color="limegreen">(必填)</font></span>
+						<span class="message">使用类型：</span>
+						<span>
+							<select name="" id="type">
+								<option value="" style="display: none;" disabled selected>选择类型</option>
+								<option value="">录用</option>
+								<option value="">会议</option>
+							</select>
+						</span>
+					</div>
+					<div class="mainMessage">
+						<span class="biTian"><font color="limegreen">(必填)</font></span>
+						<span class="message">电子邮箱：</span>
+						<input type="email" name="" id="email" value="" style="" placeholder="请输入邮箱地址" />
+					</div>
+					<div class="mainMessage">
+						<span style="margin-left: 213px; margin-right: 40px;">备注：</span>
+						<span>
+							<textarea name="" rows="6" cols="50" maxlength="255" placeholder="200字左右" id="describe"></textarea>
+						</span>
+					</div>
+					<div class="mainMessage" style="margin-left: 200px;">
+						<button type="button" onclick="addApplyRecord();">确认</button>
+						<button type="button" onclick="exit();">退出</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<p class="footerWriting"><font color="#399b69">Copyright © 2010-2017 沈阳农业大学 版权所有</font></p>
+				<p class="footerWriting"><font color="#399b69">系统研发与技术支持：神农软件</font></p>
+				<p class="footerWriting"><font color="#399b69">开发者：神农软件</font></p>
+			</div>
+		</div>
+	</body>
+	<script src="../js/applyClassrome.js"></script>
+	<!--  <script src="../js/jquery.1.11.0.min.js"></script>-->
+</html>

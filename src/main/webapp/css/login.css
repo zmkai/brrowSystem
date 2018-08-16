@@ -1,0 +1,33 @@
+.footer{
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		.footerWriting{
+			text-align: center;
+			line-height: 6px;
+			font-size: small;
+		}
+		.form{
+			margin: 0px 140px 60px 140px;
+			background-color: #ffffff;
+			width: 960px;
+			height: 330px;
+		}
+		.loginP{
+			font-size: larger;
+			margin-left: 310px;
+		}
+		#username{
+			width: 280px;
+			height: 40px;
+			margin-top: 68px;
+			
+		}
+		#password{
+			width: 280px;
+			height: 40px;
+			margin-bottom: 25px;
+		}
+		.loginInput{
+			font-size: larger;
+		}
